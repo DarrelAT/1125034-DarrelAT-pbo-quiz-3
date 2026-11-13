@@ -9,9 +9,7 @@ public abstract class DataView <T> {
     public void showInsertForm(){};
     public void showUpdateForm(){};
     public void promptDelete(){};
-    protected String getPrimaryKeyValue(String data){
-        return data;
-    };
+    protected abstract String getPrimaryKeyValue(T data);
     protected abstract String[] getFields();
     protected abstract T convertValueToModel(String [] value);
     protected abstract String[] convertModelTovalues(T data);
