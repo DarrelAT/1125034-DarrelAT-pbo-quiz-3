@@ -7,5 +7,12 @@ public abstract class DataView <T> {
     private List<T> records = new ArrayList<>();
     public void printByPk(String primaryKey){}
     public void showInsertForm(){};
-    public 
+    public void showUpdateForm(){};
+    public void promptDelete(){};
+    protected String getPrimaryKeyValue(String data){
+        return data;
+    };
+    protected abstract String[] getFields();
+    protected abstract T convertValueToModel(String [] value);
+    protected abstract String[] convertModelTovalues(T data);
 }
